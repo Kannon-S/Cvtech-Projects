@@ -1,0 +1,53 @@
+.row {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: inset 0px 0px 0px 1px red;
+  box-sizing: border-box;
+}
+
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: purple;
+}
+.pink {
+  background-color: pink;
+}
+.yellow {
+  background-color: yellow;
+}
+.orange {
+  background-color: orange;
+}
+.teal {
+  background-color: teal;
+}
+.color-hidden {
+  background-color: #eee;
+}
+
+.card.done {
+  cursor: default;
+}
+
+.card.done:hover {
+  cursor: default;
+  box-shadow: none;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <h1>Exponents</h1>
+    <label for="start">Starting Number:</label>
+    <input type="number" id="start" />
+    <br />
+    <br />
+    <label for="end">Exponent Number:</label>
+    <input type="number" id="expo" />
+    <br />
+    <br />
+    <button id="generate" onclick="submit()">Generate</button>
+    <h2>Result:</h2>
+    <p id="result"></p>
+    <button id="submit-button">Click to have funny time</button>
+    <button id="clear-button">
+      Click to be depressed again after clicking the funny time button
+    </button>
+
+    <div id="image-container">
+      <img
+        id="displayed-image"
+        src="/html/images/val.funny.jpg"
+        alt="Valorant"
+        style="width: 100%"
+      />
+    <script>
+      function submit() {
+        let start = parseFloat(document.getElementById("start").value);
+        let expo = parseFloat(document.getElementById("expo").value);
+        let text = "";
+        text = start ** expo;
+        document.getElementById("result").innerHTML = text;
+        };
+        document.getElementById("submit-button").addEventListener("click", function () {
+        let imageContainer = document.getElementById("image-container");
+        imageContainer.style.display = "block"; // Show the image
+
+        document.getElementById("clear-button").addEventListener("click", function () {
+          let imageContainer = document.getElementById("image-container");
+          imageContainer.style.display = "none"; // Hide the image
+        });
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+#image-container {
+  display: none; /* Initially hide the image */
+  margin-top: 20px;
+}

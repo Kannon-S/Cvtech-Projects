@@ -1,0 +1,44 @@
+body {
+  background-color: aliceblue;
+}
+#firstname {
+  background-color: rgb(140, 168, 210);
+  width: 10%;
+  font-size: large;
+  text-align: center;
+  border-radius: 15px;
+}
+#lastname {
+  background-color: rgb(140, 168, 210);
+  width: 10%;
+  font-size: large;
+  text-align: center;
+  border-radius: 15px;
+}
+#phonenumber {
+  background-color: rgb(140, 168, 210);
+  width: 10%;
+  font-size: large;
+  text-align: center;
+  border-radius: 15px;
+}
+#submit {
+  padding: 10px;
+  font-size: large;
+}
+#info {
+  text-align: center;
+}
+#myTable {
+  color: black;
+}
+button {
+  margin: 5px;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+}
+#reset {
+  padding: 10px;
+  font-size: large;
+}

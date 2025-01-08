@@ -1,0 +1,62 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memory-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db; /* Blue front side */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.card.flipped {
+  background-color: transparent; /* Remove front color when flipped */
+}
+
+.card.matched {
+  background-color: #2ecc71; /* Green color for matched cards */
+  cursor: default;
+}
+
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.card.flipped .back {
+  background-color: currentColor; /* Show color when flipped */
+}

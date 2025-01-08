@@ -1,0 +1,279 @@
+body {
+  margin: 10%;
+}
+div {
+  border: solid black 2px;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.pgnum {
+  text-align: center;
+  font-size: 25px;
+}
+#maintext {
+  padding-left: 55%;
+  color: grey;
+  font: 20px;
+  padding-top: 70px;
+}
+#image {
+  float: left;
+}
+.info {
+  border: 2px white;
+  border-spacing: 2px;
+  background-color: rgb(100, 99, 99);
+  padding-left: 40%;
+  padding-right: 40%;
+  color: white;
+}
+.name {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 60%;
+}
+.date {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 23.7%;
+}
+.under {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-bottom: 2px;
+  width: 60%;
+}
+.address {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 88.7%;
+}
+.under2 {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-bottom: 2px;
+  width: 88.7%;
+}
+.phone {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 42.4%;
+}
+.email {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 43.1%;
+}
+.dateava,
+.social,
+.salary {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 21.6%;
+}
+.position {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 75.3%;
+}
+.learn {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 74.1%;
+}
+.space {
+  width: 3%;
+}
+.when {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 39.5%;
+}
+.explain {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 38%;
+}
+
+.education {
+  border: 2px white;
+  border-spacing: 2px;
+  background-color: rgb(100, 99, 99);
+  padding-left: 44%;
+  padding-right: 44%;
+  color: white;
+}
+.hs {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 39.8%;
+}
+.tf {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 5%;
+}
+.small {
+  width: 1%;
+}
+.dip {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 45.3%;
+}
+.ref {
+  border: 2px white;
+  border-spacing: 2px;
+  background-color: rgb(100, 99, 99);
+  padding-left: 44%;
+  padding-right: 44%;
+  color: white;
+}
+.fn {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 70%;
+}
+.rs {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 10%;
+}
+.ph {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+}
+.em {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 90%;
+}
+.blank,
+tt {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: lightgrey;
+  width: 94%;
+  border-width: 1px;
+  border-right: 2px;
+  border-left: 2px;
+  font-size: 5px;
+  color: lightgrey;
+}
+.pe {
+  border: 2px white;
+  border-spacing: 2px;
+  background-color: rgb(100, 99, 99);
+  padding-left: 41.5%;
+  padding-right: 41.5%;
+  color: white;
+}
+.response {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 86%;
+}
+.leave {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 63.7%;
+}
+.saa {
+  border: 2px white;
+  border-spacing: 2px;
+  background-color: rgb(100, 99, 99);
+  padding-left: 43%;
+  padding-right: 43%;
+  color: white;
+}
+.answer {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 70%;
+}
+.das {
+  border: 2px white;
+  border-spacing: 2px;
+  background-color: rgb(100, 99, 99);
+  padding-left: 41.4%;
+  padding-right: 41.4%;
+  color: white;
+}
+.sign {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 70%;
+}
+.date2 {
+  border-right: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-color: black;
+  border-width: 1px;
+  width: 17%;
+}

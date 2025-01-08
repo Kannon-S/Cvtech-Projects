@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="This is a website that teaches HTML and CSS"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="keywords" content="coding, tutorials, html, css" />
+    <meta name="author" content="Kannon Smith" />
+    <title>My website</title>
+  </head>
+  <body>
+    <header>
+      <h1>Images, Pictures, and Figures</h1>
+    </header>
+    <main>
+      <p><img src="../images/Elden Ring.jfif" alt="Elden Ring" /></p>
+      <p>
+        <figure>
+          <img src="/html/images/bo3.2.jpg" alt="BO3" />
+          <figcaption>BO3 Video Game Cover</figcaption>
+        </figure>
+      </p>
+      <br />
+      <br />
+      <p>
+        <picture>
+          <source
+            srcset="/html/images/bo3.2.jpg"
+            media="(min-width: 900px)"
+            width="300px"
+          />
+          <source
+            srcset="/html/images/ghost.mask.jpg"
+            media="(max-width: 650px)"
+            width="300px"
+          />
+
+          <img src="/html/images/val.funny.jpg" alt="fallback" width="300px" />
+        </picture>
+      </p>
+    </main>
+  </body>
+</html>

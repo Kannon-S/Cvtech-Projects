@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #image-container {
+      display: none; /* Initially hide the image */
+      margin-top: 20px;
+    }
+  </style>
+  <body>
+    <h1>Monies</h1>
+    <label for="start">Hours worked:</label>
+    <input type="number" id="hours_worked" required />
+    <br />
+    <label for="start">Hourly wage:</label>
+    <input type="number" id="hourly_wages" required />
+    <br />
+    <button id="calculate" onclick="submit()">Calculate</button>
+    <table>
+      <tr>
+        <th>Pay:</th>
+        <th id="Regular_pay"></th>
+      </tr>
+    </table>
+    <button id="submit-button">Click to have funny time</button>
+    <button id="clear-button">
+      Click to be depressed again after clicking the funny time button
+    </button>
+
+    <div id="image-container">
+      <img
+        id="displayed-image"
+        src=""
+        alt="Random val pic"
+        style="width: 100%"
+      />
+    </div>
+    <script>
+      const images = [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl4fr8fGfp7e9glNEIjJbbnvX_9Dgphn1hClDp_CoCX2sIURbHk8tadcoNy8oT4NDU7JA&usqp=CAU",
+        "https://i.ytimg.com/vi/gDqB3dJNzVs/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/xEuASN1lA5Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC2PrBJDT9VvpfbBC2xDzs5k6bsnw",
+        "https://i.ytimg.com/vi/6ZUH6lMcpf8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAp8kkKcqn0L-WhFlmCJQ3hjIvhSg",
+        "https://i.ytimg.com/vi/sd_AxeVFaHk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC-dNdkfttEiXGe8EGhD8CtAFIrng",
+        "https://i.ytimg.com/vi/BS33k2b1_Nc/maxresdefault.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShTH8qfTa08Dak4Iy6-hw-6D1zmo3xHU0HhQ&s",
+        "https://i.ytimg.com/vi/B-bVQshYaDY/sddefault.jpg",
+        "https://i.ytimg.com/vi/CdiPsfj7HHg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDjn4WSrA2eQ7RwnNZER8QaIqQ3Pw",
+        "https://i.ytimg.com/vi/ZUGrL8RGBm8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLADnhx9A8w9mUGGEScG2evOBMwSOw",
+        "https://i.ytimg.com/vi/pseh0FPT2-Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDeQqL9SML-HZ7XYnT4ejOYh-w6NA",
+        "https://i.ytimg.com/vi/eJLbsAAu8Ww/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBV8lwfLfRjknHdUQQpR2xySgA2UQ",
+        "https://cdn.turbosmurfs.gg/maxresdefault_1a6b1c86d5.jpg",
+        "https://i.ytimg.com/vi/q9u8FOfaePs/hqdefault.jpg",
+        "https://external-preview.redd.it/JDp9N5vNaFmEMULrciVbOiMKqJ5CMJQ7ZRLKvkiWbRE.png?format=pjpg&auto=webp&s=727bd44a466e7c422c13cf608cb11111383f30a3",
+        "https://i.ytimg.com/vi/H16kHo0dOAU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDr3TGsa4E0g0SC2-bP4lq0s4TCiQ",
+      ];
+      function submit() {
+        let work = parseFloat(document.getElementById("hours_worked").value);
+        let wage = parseFloat(document.getElementById("hourly_wages").value);
+
+        if (work <= 40) {
+          let rP = work * wage;
+          document.getElementById("Regular_pay").innerHTML = rP;
+        } else {
+          let oT = wage * 40 + wage * 1.5 * (work - 40);
+          document.getElementById("Regular_pay").innerHTML = oT;
+        }
+      }
+      document
+        .getElementById("submit-button")
+        .addEventListener("click", function () {
+          let randomIndex = Math.floor(Math.random() * images.length);
+          let selectedImage = images[randomIndex];
+
+          let imageContainer = document.getElementById("image-container");
+          let imgElement = document.getElementById("displayed-image");
+          imgElement.src = selectedImage; // Set the random image source
+          imageContainer.style.display = "block"; // Show the image
+        });
+
+      document
+        .getElementById("clear-button")
+        .addEventListener("click", function () {
+          let imageContainer = document.getElementById("image-container");
+          imageContainer.style.display = "none"; // Hide the image
+        });
+    </script>
+  </body>
+</html>

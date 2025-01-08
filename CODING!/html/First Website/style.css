@@ -1,0 +1,44 @@
+#goonmax {
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+  font-size: 20px;
+}
+a {
+  font-size: 30px;
+  text-decoration: none;
+  color: aliceblue;
+}
+#goonmin {
+  border-spacing: 25px;
+  background-color: #3399ff;
+  margin: 0;
+  padding: 1%;
+  width: 97vw;
+  word-spacing: 40px;
+  text-align: center;
+}
+.navbutton {
+  display: inline-block;
+  list-style-type: none;
+}
+#edgemax {
+  padding-left: 25%;
+  padding-right: 25%;
+  font-size: 25px;
+}
+#edgemin {
+  text-align: center;
+  color: aliceblue;
+}
+#edgelord {
+  text-align: center;
+  font-size: 25px;
+}
+body {
+  background-color: #f8b470;
+  color: aliceblue;
+}
+#jacob {
+  color: red;
+}

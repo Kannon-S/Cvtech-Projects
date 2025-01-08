@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Name and Number Input -->
+    <div align="center">
+      <input
+        type="text"
+        class="inputeddata"
+        placeholder="First Name"
+        id="firstname"
+      />
+      <br />
+      <br />
+      <input
+        type="text"
+        class="inputeddata"
+        placeholder="Last Name"
+        id="lastname"
+      />
+      <br />
+      <br />
+      <input
+        type="text"
+        class="inputeddata"
+        placeholder="(000)000-0000"
+        id="phonenumber"
+      />
+    </div>
+    <br />
+    <!-- Submit and Reset Button -->
+    <div align="center">
+      <button id="submit" onclick="submit()">Submit</button>
+      <button id="reset" onclick="reset()">Reset</button>
+    </div>
+    <br />
+    <br />
+    <!-- Output Table -->
+    <script>
+      function reset() {
+        document.getElementById("firstname").value = " ";
+        document.getElementById("lastname").value = " ";
+        document.getElementById("phonenumber").value = " ";
+      }
+      function submit() {
+        let firstName = document.getElementById("firstname").value;
+        let lastName = document.getElementById("lastname").value;
+        let phoneNum = document.getElementById("phonenumber").value;
+
+        let allData = firstName + " " + lastName + " " + phoneNum;
+
+        console.log(allData);
+
+        var table =
+          document.getElementById("myTable") || document.createElement("TABLE");
+        if (!document.getElementById("myTable")) {
+          table.setAttribute("id", "myTable");
+          document.body.appendChild(table);
+        }
+
+        var row = document.createElement("TR");
+        var cell = document.createElement("TD");
+        cell.textContent = allData;
+        row.appendChild(cell);
+
+        var buttonSave = document.createElement("button");
+        buttonSave.innerHTML = "Save";
+        var buttonEdit = document.createElement("button");
+        buttonEdit.innerHTML = "Edit";
+        var buttonDelete = document.createElement("button");
+        buttonDelete.innerHTML = "Delete";
+
+        row.appendChild(buttonEdit);
+        row.appendChild(buttonSave);
+        row.appendChild(buttonDelete);
+        table.appendChild(row);
+
+        buttonDelete.addEventListener("click", function () {
+          row.remove();
+        });
+
+        buttonEdit.addEventListener("click", function () {
+          cell.contentEditable = true;
+          cell.style.backgroundColor = "#bccfcc";
+          buttonSave.disabled = false;
+          buttonEdit.disabled = true;
+          buttonDelete.disabled = true;
+        });
+
+        buttonSave.addEventListener("click", function () {
+          cell.contentEditable = false;
+          cell.style.backgroundColor = "transparent";
+          buttonSave.disabled = true;
+          buttonEdit.disabled = false;
+          buttonDelete.disabled = false;
+        });
+      }
+    </script>
+    <br />
+    <br />
+    <br />
+    <!-- Valorant! -->
+    <img
+      src="/html/images/val.funny.jpg"
+      alt="valorant"
+      style="width: 100%; height: 500px"
+    />
+  </body>
+</html>

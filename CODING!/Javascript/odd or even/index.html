@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odd or Even</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="color: rebeccapurple">
+    <!-- Number -->
+    <label for="name"> Number</label>
+    <input style="border-radius: 25px" type="number" name="name" id="name" />
+    <script>
+      function submit() {
+        let somethingLogical = document.getElementById("name").value;
+        if (somethingLogical % 2 === 0) {
+          alert("even");
+        } else {
+          alert("odd");
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: aqua;
+        font-size: 40px;
+      }
+      input {
+        background: rebeccapurple;
+        color: pink;
+      }
+      #name {
+        width: 90%;
+        padding: 20px;
+        font-size: 50px;
+        text-align: center;
+      }
+      .londrina-shadow-regular {
+        font-family: "Londrina Shadow", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+    <br />
+    <br />
+    <!-- Submit Button -->
+    <button
+      onclick="submit();"
+      style="
+        width: 100%;
+        font-family: Londrina Shadow;
+        padding: 15%;
+        font-size: 200px;
+        color: black;
+        background-image: url(/html/images/val.funny.jpg);
+      "
+      ;
+    >
+      Submit
+    </button>
+    <br />
+  </body>
+</html>

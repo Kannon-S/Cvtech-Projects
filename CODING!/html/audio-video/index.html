@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      audio {
+        width: 500px;
+      }
+      video {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Audio Element</h1>
+    <audio controls preload="metadata" loop>
+      <source src="../images/file_example_MP3_700KB.mp3" type="audio/mp3" />
+      <p>
+        <a href="../images/file_example_MP3_700KB.mp3">Download the MP3 file</a>
+      </p>
+    </audio>
+    <br />
+    <br />
+    <h1>HTML Video Element</h1>
+    <video
+      controls
+      crossorigin="anonymous"
+      poster="../images/For All The Dogs.jfif"
+    >
+      <source src="../images/lion-sample.webm" type="video/webm" />
+      <source src="../images/lion-sample.ogv" type="video/ogv" />
+      <source src="../images/lion-sample.mp4" type="video/mp4" />
+      <source src="../images/lion-sample.3gp" type="video/3gp" />
+      <p>
+        <a href="" download>Download the video file</a>
+      </p>
+    </video>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hobbies and Fav. Color</h1>
+    <form action="">
+      <label for="" id="label1">Play Video Games</label>
+      <input type="color" id="color1" oninput="fun1()" />
+      <br />
+      <label for="" id="label2">Hangout with Friends</label>
+      <input type="color" id="color2" oninput="fun2()" />
+      <br />
+      <label for="" id="label3">Basketball</label>
+      <input type="color" id="color3" oninput="fun3()" />
+      <br />
+      <label for="" id="label4">Binge Watching</label>
+      <input type="color" id="color4" oninput="fun4()" />
+      <br />
+      <label for="" id="label5">Drawing</label>
+      <input type="color" id="color5" oninput="fun5()" />
+      <br />
+    </form>
+    <script>
+      function fun1() {
+        let colorbox1 = document.getElementById("color1").value;
+        let updatecolor1 = (document.getElementById("label1").style.color =
+          colorbox1);
+      }
+      function fun2() {
+        let colorbox2 = document.getElementById("color2").value;
+        let updatecolor2 = (document.getElementById("label2").style.color =
+          colorbox2);
+      }
+      function fun3() {
+        let colorbox3 = document.getElementById("color3").value;
+        let updatecolor3 = (document.getElementById("label3").style.color =
+          colorbox3);
+      }
+      function fun4() {
+        let colorbox4 = document.getElementById("color4").value;
+        let updatecolor4 = (document.getElementById("label4").style.color =
+          colorbox4);
+      }
+      function fun5() {
+        let colorbox5 = document.getElementById("color5").value;
+        let updatecolor5 = (document.getElementById("label5").style.color =
+          colorbox5);
+      }
+    </script>
+  </body>
+</html>

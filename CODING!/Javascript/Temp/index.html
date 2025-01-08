@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #image-container {
+      display: none; /* Initially hide the image */
+      margin-top: 20px;
+    }
+    table,
+    tr,
+    th,
+    td {
+      padding: 1%;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>Conversion Calculater</h1>
+    <label for="start">Fahrenheit:</label>
+    <input type="number" id="bF" required />
+    <table>
+      <tr>
+        <th>Fahrenheit to Celcius</th>
+        <th>Fahrenheit to kelvin</th>
+      </tr>
+      <tr>
+        <td id="FtC">Answer Here</td>
+        <td id="FtK">Answer Here</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+
+    <label for="end">Celcius:</label>
+    <input type="number" id="bC" required />
+    <table>
+      <tr>
+        <th>Celcius to Fahrenheit</th>
+        <th>Celcius to Kelvin</th>
+      </tr>
+      <tr>
+        <td id="CtF">Answer Here</td>
+        <td id="CtK">Answer Here</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+
+    <label for="increment">Kelvin Conv.:</label>
+    <input type="number" id="bK" required />
+    <table>
+      <tr>
+        <th>Kelvin to Celcius</th>
+        <th>Kelvin to Fahrenheit</th>
+      </tr>
+      <tr>
+        <td id="KtC">Answer Here</td>
+        <td id="KtF">Answer Here</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+
+    <button id="generate" onclick="submit()">Generate</button>
+    <button id="reset" onclick="reset()">Reset</button>
+
+    <h2>Result:</h2>
+    <pre id="result"></pre>
+    <br />
+    <br />
+    <button id="submit-button">Click to have funny time</button>
+    <button id="clear-button">
+      Click to be depressed again after clicking the funny time button
+    </button>
+
+    <div id="image-container">
+      <img
+        id="displayed-image"
+        src="/html/images/val.funny.jpg"
+        alt="Valorant"
+        style="width: 100%"
+      />
+    </div>
+    <script>
+      function reset() {
+        document.getElementById("bF").value = "Answer Here";
+        document.getElementById("bK").value = "Answer Here";
+        document.getElementById("bC").value = "Answer Here";
+        document.getElementById("CtF").innerHTML = "Answer Here";
+        document.getElementById("KtF").innerHTML = "Answer Here";
+        document.getElementById("FtC").innerHTML = "Answer Here";
+        document.getElementById("CtK").innerHTML = "Answer Here";
+        document.getElementById("KtC").innerHTML = "Answer Here";
+        document.getElementById("FtK").innerHTML = "Answer Here";
+      }
+      //calculations of conversions on submit
+      function submit() {
+        let text = " ";
+        let F = parseInt(document.getElementById("bF").value);
+        let C = parseInt(document.getElementById("bC").value);
+        let K = parseInt(document.getElementById("bK").value);
+        let fC = ((F - 32) * (5 / 9)).toFixed(2);
+        let cF = (C * (9 / 5) + 32).toFixed(2);
+        let fK = ((F - 32) * (5 / 9) + 273.15).toFixed(2);
+        let cK = (C + 273.15).toFixed(2);
+        let kF = ((K - 273.15) * (9 / 5) + 32).toFixed(2);
+        let kC = (K - 73.15).toFixed(2);
+
+        // puts data into table elements
+        document.getElementById("bF").innerHTML = F;
+        document.getElementById("FtK").innerHTML = fK;
+        document.getElementById("FtC").innerHTML = fC;
+        document.getElementById("bC").innerHTML = C;
+        document.getElementById("CtF").innerHTML = cF;
+        document.getElementById("CtK").innerHTML = cK;
+        document.getElementById("bK").innerHTML = K;
+        document.getElementById("KtF").innerHTML = kF;
+        document.getElementById("KtC").innerHTML = kC;
+      }
+      document
+        .getElementById("submit-button")
+        .addEventListener("click", function () {
+          let imageContainer = document.getElementById("image-container");
+          imageContainer.style.display = "block"; // Show the image
+
+          document
+            .getElementById("clear-button")
+            .addEventListener("click", function () {
+              let imageContainer = document.getElementById("image-container");
+              imageContainer.style.display = "none"; // Hide the image
+            });
+        });
+    </script>
+  </body>
+</html>
